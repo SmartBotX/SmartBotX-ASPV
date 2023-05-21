@@ -1,0 +1,239 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home";
+
+}
+
+<!--Main-->
+<section class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start" data-aos="fade">
+    <div class="container">
+        <div class="d-sm-flex align-items-center justify-content-between">
+            <div>
+                <h1>
+                    Find the right <span class="text-warning">Bot</span> for you
+                </h1>
+                <p class="lead">
+                    Revolutionize your Discord Experience with SmartBot X and find
+                    your personal AI helper now!
+                </p>
+                <br />
+                <a asp-area="" asp-page="/Bot">
+                    <button class="btn btn-primary btn-lg">
+                        Build A Bot
+                    </button>
+                    </a>
+            </div>
+            <img class="d-none d-md-block img-fluid"
+                 src="/images/a.png"
+                 alt="Robot"
+                 width="250"
+                 height="250" />
+        </div>
+    </div>
+</section>
+
+<!--NewsLetter-->
+<section class="bg-primary text-light p-5" id="Home" data-aos="fade-up">
+    <div class="container">
+        @if (Model.errorMessage.Length > 0)
+        {
+            <div class="alert alert-warning alert-dismissible fade show">
+                <strong>@Model.errorMessage</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        }
+        <div class="d-md-flex justify-content-between align-item-center">
+            <h3 class="mb-3 mb-md-0">Sign Up for our Newsletter</h3>
+
+            <form class="input-group news-input" method="POST">
+                <input type="text" class="form-control" placeholder="Enter Email" name="email" value="@Model.cl.email" />
+                <button class="btn bg-dark btn-lg text-light" type="submit">
+                    Sign Up
+                </button>
+            </form>
+        </div>
+        @if (Model.successMessage.Length > 0)
+        {
+            <strong class="succ">@Model.successMessage</strong>
+        }
+    </div>
+</section>
+
+<!--About Us-->
+<section class="p-5 bg-white" id="About" data-aos="slide-up">
+    <div class="container">
+        <h2 class="text-center text-dark">About Us</h2>
+    </div>
+</section>
+
+<!--Who We Are-->
+<section class="bg-warning text-light p-5 text-center text-sm-start" data-aos="slide-up">
+    <div class="container">
+        <div class="d-sm-flex align-items-center">
+            <img class="d-none d-md-block img-fluid"
+                 src="/images/who.png"
+                 alt="Robot"
+                 width="250"
+                 height="250" />
+            <div>
+                <h1 class="text-center text-md-end text-dark justify-content-between">Who we are?</h1>
+                <p class="lead text-center text-md-end text-dark">
+                    SmartBotX is a company founded by five students who build custom
+                    Discord bots for users who want a bot but don't have the time or
+                    expertise to build it themselves. We offer a wide range of
+                    features and customization options, so you can create a bot that
+                    perfectly meets your needs. We also offer a free consultation, so
+                    you can learn more about our services and how we can help you.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Mission-->
+
+<section class="bg-dark text-light p-5 text-center text-sm-start" data-aos="slide-up">
+    <div class="container">
+        <div class="d-sm-flex align-items-center justify-content-between">
+            <div>
+                <h1>Mission & Vision</h1>
+                <p class="lead">
+                    Our mission is to create revolutionary bot technologies that empower Discord
+                    users to optimize their experience. While our vision is to be the leading bot
+                    development firm in the Discord market, providing innovative solutions that
+                    enhance the Discord platform and exceed customer expectations.
+                </p>
+            </div>
+            <img class="d-none d-md-block img-fluid"
+                 src="/images/mv.png"
+                 alt="Mission&Vision"
+                 width="350" />
+        </div>
+    </div>
+</section>
+
+<!--Meet The Team-->
+<section class="p-5 bg-primary" data-aos="slide-up">
+    <div class="container">
+        <h2 class="text-center text-white">Meet the team</h2>
+        <p class="text-center text-white">
+            Our team is made up of talented students who are passionate about
+            creating innovative products.
+        </p>
+    </div>
+    <div class="row g-1 mb-4">
+        <div class="col-md-6 col-lg-3 mx-auto">
+            <div class="card bg-light">
+                <div class="card-body text-center">
+                    <img src="/images/ciejay.jpg"
+                         class="rounded-circle mb-3 w-50"
+                         alt="Marc Ciejay D. Macaraig" />
+                    <h3 class="card-title mb-3">Marc Ciejay D. Macaraig</h3>
+                    <p class="card-text">Owner / Product Researcher</p>
+                    <a href="https://" class="link-underline link-underline-opacity-0">
+                        <i class="bi bi-facebook text-dark mx-1 fs-3"></i>
+                    </a>
+                    <a href="https://" class="link-underline link-underline-opacity-0"><i class="bi bi-envelope-at text-dark fs-3"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+            <div class="card bg-light">
+                <div class="card-body text-center">
+                    <img src="/images/pyoni.png"
+                         class="rounded-circle mb-3 w-50"
+                         alt="Fiona Anne Gaile A. Concejero" />
+                    <h3 class="card-title mb-3">Fiona Anne Gaile A. Concejero</h3>
+                    <p class="card-text">Secretary</p>
+                    <a href="https://" class="link-underline link-underline-opacity-0">
+                        <i class="bi bi-facebook text-dark mx-1 fs-3"></i>
+                    </a>
+                    <a href="https://" class="link-underline link-underline-opacity-0"><i class="bi bi-envelope-at text-dark fs-3"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+            <div class="card bg-light">
+                <div class="card-body text-center">
+                    <img src="/images/Harley.png"
+                         class="rounded-circle mb-3 w-50"
+                         alt="Vincent Harley R. Jovellano" />
+                    <h3 class="card-title mb-3">Vincent Harley R. Jovellano</h3>
+                    <p class="card-text">Website & Bot Developer</p>
+                    <a href="https://" class="link-underline link-underline-opacity-0">
+                        <i class="bi bi-facebook text-dark mx-1 fs-3"></i>
+                    </a>
+                    <a href="https://" class="link-underline link-underline-opacity-0"><i class="bi bi-envelope-at text-dark fs-3"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+            <div class="card bg-light">
+                <div class="card-body text-center">
+                    <img src="/images/cube.jpg"
+                         class="rounded-circle mb-3 w-50"
+                         alt="Vhea Mhel I. Cube" />
+                    <h3 class="card-title mb-3">Vhea Mhel Ignacio Cube</h3>
+                    <p class="card-text">Product Researcher</p>
+                    <a href="https://" class="link-underline link-underline-opacity-0">
+                        <i class="bi bi-facebook text-dark mx-1 fs-3"></i>
+                    </a>
+                    <a href="https://" class="link-underline link-underline-opacity-0"><i class="bi bi-envelope-at text-dark fs-3"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+            <div class="card bg-light">
+                <div class="card-body text-center">
+                    <img src="/images/antunio.png"
+                         class="rounded-circle mb-3 w-50"
+                         alt="Timothy John A. Antonio" />
+                    <h3 class="card-title mb-3">Timothy John A. Antonio</h3>
+                    <p class="card-text">Marketing Manager</p>
+                    <a href="https://" class="link-underline link-underline-opacity-0">
+                        <i class="bi bi-facebook text-dark mx-1 fs-3"></i>
+                    </a>
+                    <a href="https://" class="link-underline link-underline-opacity-0"><i class="bi bi-envelope-at text-dark fs-3"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="text-light p-5 text-center text-sm-start bg-white" data-aos="slide-up">
+    <div class="container">
+        <h1 class="text-dark text-center">Get in touch</h1>
+        <div class="d-sm-flex align-items-center justify-content-between">
+            <div>
+                <hr class="text-dark">
+                <p class="text-dark lead">Email: <span class="text-dark">smartbotx@webname.com</span></p>
+                <hr class="text-dark">
+                <p class="text-dark lead">Contact: <span class="text-dark">+639-143-234-675</span></p>
+                <hr class="text-dark">
+                <p class="text-dark">-OR-</p>
+                <a href="https://facebook.com/smartbotx" class="link-underline link-underline-opacity-0">
+                    <i class="bi bi-facebook text-primary mx-3 ms-lg-0 px-auto fs-1"></i>
+                </a>
+                <a href="https://twitter.com/smartbotx" class="link-underline link-underline-opacity-0">
+                    <i class="bi bi-twitter text-primary mx-3 px-auto fs-1"></i>
+                </a>
+                <a href="https://discord.gg/mfm4N3NzU6" class="link-underline link-underline-opacity-0">
+                    <i class="bi bi-discord text-primary mx-3 px-auto fs-1"></i>
+                </a>
+            </div>
+            <img class="d-none d-md-block img-fluid"
+                 src="/images/contact.png"
+                 alt="Mission&Vision"
+                 width="350" />
+        </div>
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
+

@@ -1,0 +1,32 @@
+﻿@page
+@model SmartBotX_V_2.Pages.Admin.editModel
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Pages/Shared/_AdminLayout.cshtml";
+}
+<!--NewsLetter-->
+<section class="bg-primary text-light p-5" id="Home" data-aos="fade-up">
+    <div class="container">
+        @if (Model.errorMessage.Length > 0)
+        {
+            <div class="alert alert-warning alert-dismissible fade show">
+                <strong>@Model.errorMessage</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        }
+        <div class="d-md-flex justify-content-between align-item-center">
+            <h3 class="mb-3 mb-md-0">Edit Email</h3>
+            <form class="input-group news-input" method="POST">
+                <input type="hidden" name="id" value="@Model.cl.Id" />
+                <input type="text" class="form-control" placeholder="Enter Email" name="email" value="@Model.cl.email" />
+                <button class="btn bg-dark btn-lg text-light" type="submit">
+                    Sign Up
+                </button> <br />
+                @if (Model.successMessage.Length > 0)
+                {
+                    <strong>@Model.successMessage</strong>
+                }
+            </form>
+        </div>
+    </div>
+</section>

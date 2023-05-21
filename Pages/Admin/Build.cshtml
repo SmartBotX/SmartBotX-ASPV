@@ -1,0 +1,52 @@
+﻿@page
+@model SmartBotX_V_2.Pages.Admin.BuildModel
+@{
+    ViewData["Title"] = "Build Requests";
+    Layout = "~/Pages/Shared/_AdminLayout.cshtml";
+}
+<section class="bg-warning text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start" data-aos="fade">
+    <div class="container">
+        <div class="d-sm-flex align-items-center justify-content-between">
+            <div>
+                <h1 class="text-dark">
+                    Build Requests
+                </h1>
+                <p class="lead text-dark">
+                    Here you'll see the list of requests for a specific bot builds for discord.<br /><hr class="text-dark">
+                    <span class="text-primary">This page is for Product Manager and Developers only.</span>
+
+                </p>
+                <br />
+            </div>
+            <img class="d-none d-md-block img-fluid"
+                 src="/images/a.png"
+                 alt="Robot"
+                 width="250"
+                 height="250" />
+        </div>
+    </div>
+</section>
+
+<section class="bg-primary text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start" data-aos="fade">
+    <div class="container">
+        @foreach (var item in Model.listClient)
+        {
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                       @item.Id - @item.email
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <span>@item.description</span> <br/><br/>
+                            <a class="btn btn-danger btn-sm" href="/Build/Delete?id=@item.Id">Delete</a>
+                </div>
+            </div>
+           </div>
+          </div>
+        }
+    </div>
+    <hr />
+</section>

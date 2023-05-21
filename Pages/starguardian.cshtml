@@ -1,0 +1,205 @@
+﻿@page
+@model SmartBotX_V_2.Pages.starguardianModel
+@{
+    ViewData["Title"] = "StarGuardian";
+}
+<section class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start" data-aos="fade">
+    <div class="container">
+        <div class="d-sm-flex align-items-center justify-content-between">
+            <div>
+                <h1>Meet <span class="text-warning">StarGuardian</span></h1>
+                <p class="lead">
+                    StarGuardian is an AI (Artificial Intelligence) robot with
+                    multiple features. For starters the free features of the bot is
+                    the play check, providing memes and facts.
+                </p>
+                <br />
+                <form action="https://discord.com/api/oauth2/authorize?client_id=1107997377492693102&permissions=19235547376759&scope=bot">
+                    <button class="btn btn-primary btn-lg">
+                        Add to your server
+                    </button>
+                </form>
+            </div>
+            <img class="d-none d-md-block img-fluid"
+                 src="/images/a.png"
+                 alt="Robot"
+                 width="250"
+                 height="250" />
+        </div>
+    </div>
+</section>
+
+<!--What is StarGuardian-->
+<section class="bg-warning text-light p-5 text-center text-sm-start" data-aos="slide-up">
+    <div class="container">
+        <div class="d-sm-flex align-items-center">
+            <img class="d-none d-md-block img-fluid"
+                 src="/images/who.png"
+                 alt="Robot"
+                 width="250"
+                 height="250" />
+            <div>
+                <h1 class="text-center text-md-end text-dark justify-content-between">
+                    What is StarGuardian?
+                </h1>
+                <p class="lead text-center text-md-end text-dark">
+                    StarGuardian is an AI (Artificial Intelligence) robot with
+                    multiple features. For starters the free features of the bot is
+                    the play check, providing memes and facts. <br /><br />
+                    The play check will use the music streaming application called
+                    Spotify to detect the mentioned user’s current music they are
+                    playing. Next, is providing memes that will get on multiple
+                    communities on an application called Reddit, to bring joy to the
+                    other users. Lastly, to provide facts, it will be provided by a
+                    website called some-random-api.com. <br /><br />
+                    This bot will send facts on multiple animals such as cats, dogs,
+                    fox, kangaroo, koala, panda, red panda, birds, and racoon. For its
+                    premium features is the daily horoscope. The users must set their
+                    sign by a command. Every single day the horoscope of the users
+                    will change depending on the date of when they command the bot for
+                    their horoscope.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Features-->
+<section class="text-light p-5 text-center text-sm-start bg-white" data-aos="slide-up">
+    <div class="container">
+        <h1 class="text-dark text-center">Features</h1>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            Security / Moderation
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p>
+                            <b>- Add Role</b>
+                            <br />
+                            This feature allows users to add roles to themselves. To use this feature, simply type "add role" followed by the name of the role in the chat and the bot will add the role to you.
+                            <br /><br />
+                            <b>- Ban</b>
+                            <br />
+                            This feature allows users to ban other users from the server. To use this feature, simply type "ban" followed by the username of the user you want to ban in the chat and the bot will ban the user.
+                            <br /><br />
+                            <b>- Scam Detection</b>
+                            <br />
+                            This feature allows users to detect scams. To use this feature, simply type "scam" followed by the link you want to check in the chat and the bot will respond with whether or not the link is a scam.
+                            <br /><br />
+                            <b>- Kick</b>
+                            <br />
+                            This feature allows users to kick other users from the server. To use this feature, simply type "kick" followed by the username of the user you want to kick in the chat and the bot will kick the user.
+                            <br /><br />
+                            <b>- RemoveRole</b>
+                            <br />
+                            This feature allows users to remove roles from themselves. To use this feature, simply type "remove role" followed by the name of the role you want to remove in the chat and the bot will remove the role from you.
+                            <br /><br />
+                            <b>- Unban</b>
+                            <br />
+                            This feature allows users to unban other users from the server. To use this feature, simply type "unban" followed by the username of the user you want to unban in the chat and the bot will unban the user.
+                            <p/>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            Fun
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                        <p>
+                            <b>- Animal Facts</b>
+                            <br />
+                            This feature allows users to learn interesting facts about animals. To use this feature, simply type "animal facts" in the chat and the bot will respond with a random fact about an animal.
+                            <br/><br/>
+                            <b>- Memes</b>
+                            <br />
+                            This feature allows users to share memes in the chat. To use this feature, simply type "meme" in the chat and the bot will respond with a random meme.
+                            <br /><br/>
+                            <b>- Horoscopes</b>
+                            <br /> 
+                            This feature allows users to get their horoscope for the day. To use this feature, simply type "horoscope" followed by your sign in the chat and the bot will respond with your horoscope.
+                            <br/><br/>
+                            <b>- Ily (No is always the response)</b>
+                            <br/>
+                            This feature is a joke feature that always responds with "no" when users tell the bot they love it. To use this feature, simply type "ily" in the chat and the bot will respond with "no."
+                        <p />
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                            Utility
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                        <p>
+                            <b>- PlayCheck</b>
+                            <br />
+                            This feature checks the status of Spotify, MusicBee, and Foobar2000. To use this feature, simply type "playcheck"  and the bot will respond with the status of the music player.
+                            <br /><br />
+                            <b>- Bot Info</b>
+                            <br/>
+                            This feature allows users to get their horoscope for the day. To use this feature, simply type "horoscope" and select what your sign is and the bot will respond with your horoscope.
+                            <br/> <br/>
+                            <b>- Bot Invite (Invites Bot)</b>
+                            <br/>
+                            This feature allows users to invite the bot to their server. To use this feature, simply type "bot invite" in the chat and the bot will respond with a link that you can use to invite the bot to your server.
+                            <br/> <br/>
+                            <b>- Bot Ping (Server Ping)</b>
+                            <br/>
+                            This feature allows users to check the bot's latency. To use this feature, simply type "bot ping" in the chat and the bot will respond with its latency.
+                            <br/> <br/>
+                            <b>- Server Info</b>
+                            <br/>
+                            This feature allows users to get information about the server they are in. To use this feature, simply type "server info" in the chat and the bot will respond with information about the server, such as its name, owner, and members.
+                            <br /> <br />
+                            <b>- User Info</b>
+                            <br />
+                            This feature allows users to get information about another user. To use this feature, simply type "user info" followed by the username of the user you want to get information about in the chat and the bot will respond with information about the user, such as their name, role, and join date.
+                        <p />
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</section>
+
+<section class="text-light p-5 text-center text-sm-start bg-white" data-aos="slide-up">
+    <div class="container">
+        <h1 class="text-dark text-center">Get in touch</h1>
+        <div class="d-sm-flex align-items-center justify-content-between">
+            <div>
+                <hr class="text-dark">
+                <p class="text-dark lead">Email: <span class="text-dark">smartbotx@webname.com</span></p>
+                <hr class="text-dark">
+                <p class="text-dark lead">Contact: <span class="text-dark">+639-143-234-675</span></p>
+                <hr class="text-dark">
+                <p class="text-dark">-OR-</p>
+                <a href="https://facebook.com/smartbotx" class="link-underline link-underline-opacity-0">
+                    <i class="bi bi-facebook text-primary mx-3 ms-lg-0 px-auto fs-1"></i>
+                </a>
+                <a href="https://twitter.com/smartbotx" class="link-underline link-underline-opacity-0">
+                    <i class="bi bi-twitter text-primary mx-3 px-auto fs-1"></i>
+                </a>
+                <a href="https://discord.gg/mfm4N3NzU6" class="link-underline link-underline-opacity-0">
+                    <i class="bi bi-discord text-primary mx-3 px-auto fs-1"></i>
+                </a>
+            </div>
+            <img class="d-none d-md-block img-fluid"
+                 src="/images/contact.png"
+                 alt="Mission&Vision"
+                 width="350" />
+        </div>
+    </div>
+</section>

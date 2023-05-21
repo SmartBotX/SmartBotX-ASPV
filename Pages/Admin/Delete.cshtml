@@ -1,0 +1,28 @@
+﻿@page
+@using System.Data.SqlClient
+@{
+    String Id = Request.Query["Id"];
+
+    try
+    {
+        String connectionstring = "Data Source=.\\SQLEXPRESS;Initial Catalog=smartbotx;Integrated Security=True;Pooling=False";
+
+        using (SqlConnection connection = new(connectionstring))
+        {
+            connection.Open();
+            String sql = "DELETE FROM newsletter WHERE Id=@Id";
+            using (SqlCommand command = new SqlCommand(sql, connection))
+            {
+                command.Parameters.AddWithValue("@Id", Id);
+                command.ExecuteNonQuery();
+            }
+        }
+    }catch(Exception ex)
+    {
+        Console.WriteLine("Exception: " + ex.ToString());
+        return;
+    }
+    Response.Redirect("/Admin/Newsletter");
+
+}
+

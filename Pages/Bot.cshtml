@@ -1,0 +1,83 @@
+﻿@page
+@model SmartBotX_V_2.Pages.BotModel
+@{
+    ViewData["Title"] = "Build a Bot";
+}<!--Main-->
+<section class="bg-danger text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start" data-aos="fade">
+    <div class="container">
+        <div class="d-sm-flex align-items-center justify-content-between">
+            <div>
+                <h1>Describe your bot!</h1>
+                <p class="lead">
+                    Describe how you want your bot to be, and we will take care of the rest!
+                </p>
+                <br />
+            </div>
+            <img class="d-none d-md-block img-fluid"
+                 src="/images/a.png"
+                 alt="Robot"
+                 width="250"
+                 height="250" />
+        </div>
+    </div>
+</section>
+<!--Message-->
+<section class=" p-5 text-center text-sm-start bg-dark" data-aos="slide-up">
+    <div class="container">
+        @if (Model.errorMessage.Length > 0)
+        {
+            <div class="alert alert-warning alert-dismissible fade show">
+                <strong>@Model.errorMessage</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        }
+        @if (Model.errorMessage.Length > 0)
+        {
+            <div class="alert alert-warning alert-dismissible fade show">
+                <strong>@Model.successMessage</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        }
+        <form method="POST">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label text-light">Email address</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" name="email" value="@Model.b.email">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label text-light">Describe how you want your bot</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="State Your name then describe your bot. " name="description" value="@Model.b.description"></textarea>
+        </div>
+            <button class="btn btn-primary" type="submit">Send Request</button>        
+        </form>
+    </div>
+    
+</section>
+
+<section class="text-light p-5 text-center text-sm-start bg-white" data-aos="slide-up">
+    <div class="container">
+        <h1 class="text-dark text-center">Get in touch</h1>
+        <div class="d-sm-flex align-items-center justify-content-between">
+            <div>
+                <hr class="text-dark">
+                <p class="text-dark lead">Email: <span class="text-dark">smartbotx@webname.com</span></p>
+                <hr class="text-dark">
+                <p class="text-dark lead">Contact: <span class="text-dark">+639-143-234-675</span></p>
+                <hr class="text-dark">
+                <p class="text-dark">-OR-</p>
+                <a href="https://facebook.com/smartbotx" class="link-underline link-underline-opacity-0">
+                    <i class="bi bi-facebook text-primary mx-3 ms-lg-0 px-auto fs-1"></i>
+                </a>
+                <a href="https://twitter.com/smartbotx" class="link-underline link-underline-opacity-0">
+                    <i class="bi bi-twitter text-primary mx-3 px-auto fs-1"></i>
+                </a>
+                <a href="https://discord.gg/mfm4N3NzU6" class="link-underline link-underline-opacity-0">
+                    <i class="bi bi-discord text-primary mx-3 px-auto fs-1"></i>
+                </a>
+            </div>
+            <img class="d-none d-md-block img-fluid"
+                 src="/images/contact.png"
+                 alt="Mission&Vision"
+                 width="350" />
+        </div>
+    </div>
+</section>
